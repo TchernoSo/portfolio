@@ -69,6 +69,47 @@ body{
 
 /* main page  */
 
+.main-pic{
+    height: 50vh;
+    position: relative;
+}
+ .text{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%)
+}
+
+
+
+
+.welcome{
+    font-size: 45px;
+    font-weight: 500;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 80%;
+    animation: shine 25s linear infinite;
+    
+    
+}
+
+@keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+
+
+
+  
+  
+
 .skills{
     line-height: 0;
     position: absolute;
@@ -78,7 +119,7 @@ body{
 }
 
 .wrapper{
-    display: flex;
+    display: row;
     gap: 3em;
     padding: 0 40px;
 }
