@@ -105,14 +105,48 @@ body{
     }
   }
 
+  span{
+    display: block;
+}
+
+.text1{
+    font-size: 30px;
+    width: 500px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text 3s 1;
+    background-color: #000;
+}
+
+.text2{
+    font-size: 35px;
+    
+    
+}
+
+@keyframes text {
+    0%{
+        color: black;
+        margin-bottom: -50px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -50px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -50px;
+    }
+}
 
 
-  
-  
+
 
 .skills{
     line-height: 0;
-    position: absolute;
+    /* position: absolute; */
     top:160px;
     left: 230px;
     
@@ -287,5 +321,9 @@ body{
         width: 500px;
         max-width: 80%;
         z-index: 1;
+    }
+    .text1{
+        font-size: 30px;
+        width: 500px;
     }
 }
