@@ -53,3 +53,39 @@ thumbnails.forEach((thumbnail, index) => {
 })
 
 
+// typewrititing effect 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const words = ['Coder', 'Artist', 'Writer', 'Mentor'];
+    const typeTextElement = document.getElementById('typewriter');
+
+    function typeWriter() {
+        let wordIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < words[wordIndex].length) {
+                typeTextElement.textContent += words[wordIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100); // Adjust typing speed here
+            } else {
+                setTimeout(erase, 1500); // Delay before erasing
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typeTextElement.textContent = words[wordIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 50); // Adjust erasing speed here
+            } else {
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500); // Delay before typing the next word
+            }
+        }
+
+        type();
+    }
+
+    typeWriter(); // Start the typewriting effect
+});

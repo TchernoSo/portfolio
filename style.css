@@ -67,7 +67,7 @@ body{
 
 
 
-/* main page  */
+/* Introduction  */
 
 .main-pic{
     height: 50vh;
@@ -142,28 +142,108 @@ body{
 }
 
 
+/* /typewritting effect/ */
 
 
-.skills{
-    line-height: 0;
-    /* position: absolute; */
-    top:160px;
-    left: 230px;
-    
+.type-text{
+    font-size: 24px;
+    font-weight: 600;
+    min-width: 280px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    }
+
+.type-text span{
+    position: relative;
+    margin-left: 10px;
 }
 
-.wrapper{
-    display: row;
-    gap: 3em;
-    padding: 0 40px;
+.type-text span::before{
+    content: 'Coder';
+    color: rgb(97, 175, 203);
+    animation: words 20s infinite;
+
+}
+
+.type-text span::after{
+    content: '';
+    background-color: #000000fd;
+    position: absolute;
+    width: calc(100% + 200px);
+    height: 100%;
+    border-left: 2px solid rgb(0, 0, 0);
+    right: -7px;
+    animation: cursor .6s infinite,typing 20s steps(14) infinite;
+
+}
+
+@keyframes cursor{
+    to{
+        border-left:2px solid #f6f6f6;  
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: 'Coder';
+    }
+    21%,40%{
+        content: 'Artist';
+    }
+    41%,60%{
+        content: 'Writer';
+    }
+    61%,80%{
+        content: 'Mentor';
+    }
+    81%,100%{
+        content: 'for Life!';
+    }
+}
+
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
 }
 
 
 
+/* My Cards */
 
+.card{
 
+    background-color: #000;
+    color: #ffffff;
+    text-shadow: 1px 2px 2px #00fad0;
+    margin-top: 50px;
+    }
 
+.img-responsive{
+    height: 350px;
+    width: 300px;
+    margin-left: 15%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #3498db;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+    transition: box-shadow 0.5s ease;
+}
 
+.card-title{
+    font-size: 25px;
+    padding: 10px 0 10px 0 
+}
+
+.card-text{
+    text-shadow: none;
+    font-size: 12px;
+}
 
 
  /* About me  */
