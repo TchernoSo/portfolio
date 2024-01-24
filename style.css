@@ -1,9 +1,15 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     font-family: Poppins;
     margin: 0;
     background-color: #010101;
     color: #eee;
+    /* overflow-x: hidden; */
 }
 
 
@@ -57,6 +63,10 @@ body{
       position: relative;
     
     }
+    .nav-text:hover{
+        color: #111111;
+        text-shadow: 4px 4px 4px #00fad0;
+        }
   
   
   
@@ -198,7 +208,7 @@ body{
         content: 'Mentor';
     }
     81%,100%{
-        content: 'for Life!';
+        content: '+ 15 years!';
     }
 }
 
@@ -243,8 +253,305 @@ body{
 .card-text{
     text-shadow: none;
     font-size: 12px;
+    color: #938d8d;
 }
 
+
+
+
+/* form label */
+
+.form-label{
+    color: #bdc3c7;
+    text-shadow: 4px 4px 4px #26aeedbe;
+   
+  }
+  
+  .button{
+    width: 50%;
+     margin-bottom: 20px;
+     border-radius: 50px;
+       
+     }
+  .button:hover{
+    color: #fff;
+    background-color: #000000;
+    
+  }
+  
+  .btn{
+    
+    background: linear-gradient(90deg, #000, #fff, #000);
+    border-radius: 50px;
+    background-size: 300% 300%;
+    animation: color 15s ease-in-out infinite;
+  }
+  
+  @keyframes color {
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
+
+  .name{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.name i{
+    position: absolute;
+    top: 70%;
+    left:92%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+
+.name input{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 30px;
+}
+
+.name input::placeholder{
+  color: #bbb;
+  font-weight: 500;
+}
+
+
+.email{
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  
+}
+.email i{
+  position: absolute;
+  top: 73%;
+  left: 92%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #bbb;
+}
+.email input{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 5px 30px;
+}
+.email input::placeholder{
+  color: #bbb;
+  font-weight: 500;
+}
+
+
+.message-box{
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.message-box textarea{
+  width: 100%;
+  padding: 20px 30px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.message-box textarea::placeholder{
+  color: #bbb;
+  font-weight: 500;
+}
+
+
+  .message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    text-shadow: 1px 1px 2px #f3f3f3;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 20px;
+    color: rgb(225, 89, 89);
+    text-shadow: 1px 1px 2px #f3f3f3;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+/* carousel & footer  */
+
+.main-image{
+    margin-bottom: 30px;
+}
+
+.carousel-text{
+    color: #2db4c9;
+    text-shadow: 4px 4px 4px #f7f9fb;
+    font-size: x-large;
+  }
+
+  .carousel-class{
+    height: 200px;
+
+  }
+
+  .carousel-image{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+
+  }
+.anchor{
+    text-decoration: none;
+}
+
+  .my-media{
+    text-shadow: 4px 4px 4px #00edfa;
+    margin-bottom: 20px;
+  }
+
+  .logos{
+    box-shadow: 0px 2px 4px rgba(19, 243, 236, 0.967);
+    width: 50px; 
+    height: 45px; 
+    border-radius: 20%;
+    margin-left: 15px;
+    
+    }
+
+    @media (max-width: 768px) {
+      .logos {
+        width: 45px; 
+          
+      }}
+  
+  .img-media:hover{
+    transform: scale(1.3);
+  }
+    
+    .logos:hover {
+      transform: scale(1.3);
+    }
+  
+  footer{
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #26eaed;
+    color: #020202;
+    margin-top: 20px;
+  }
+
+
+
+/* inspire-me  */
+
+.img-container {
+    position: relative;
+  }
+  
+  .title {
+    position: absolute;
+    width: 100%;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(192, 179, 179, 0.268);
+    font-size: 36px;
+    text-shadow: 1px 0px 0px #3deed049;
+    margin-bottom: 20px;
+  
+  }
+  @media (max-width: 768px) {
+    .title{font-size: 17px;}}
+  
+  .text-container {
+    opacity: 0;
+    animation-name: textFader;
+    animation-duration: 18s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 70%;
+    color: rgba(255, 255, 255, 0.44);
+  
+  }
+  
+  @media (max-width: 768px) {
+    .text-container{font-size: 13px;}
+  .tag{font-size: 15px}}
+  .text-container:nth-of-type(1) { animation-delay: 0s; }
+  .text-container:nth-of-type(2) { animation-delay: 6s; }
+  .text-container:nth-of-type(3) { animation-delay: 12s; }
+  
+  @keyframes textFader {
+    0% {
+        opacity: 0;
+    } /* fade-in */
+    11% {
+        opacity: 1;
+    } /* show */
+    22% {
+        opacity: 1;
+    } /* fade-out */
+    33% {
+        opacity: 0;
+    } /* waiting for the finish animation of other blocks */
+    100% {
+        opacity: 0;
+    }
+  }
+  
+  .img-inspir{
+    filter: brightness(0.4);
+  }
+  
+  @media (max-width: 768px) {
+    #targetElement{font-size: 14px;}}
+  
+
+
+  
 
  /* About me  */
 
