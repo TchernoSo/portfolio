@@ -122,3 +122,14 @@ function message(){
     }, 4000);
   
   }
+
+
+
+//   scroll id effect 
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+        var yOffset = window.innerHeight / 2 - section.offsetHeight / 2;
+        section.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+    }
+}

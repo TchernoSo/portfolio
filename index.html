@@ -30,13 +30,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="collapsingNavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                    <a class="nav-link nav-text text-light" style="font-family: 'Kalam', cursive;" href="/public/inspireMe.html">Inspire Me</a>
+                    <a class="nav-link nav-text text-light pointer" href="/public/inspireMe.html">Inspire Me</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link nav-text text-light" style="font-family: 'Kalam', cursive;" href="/public/aboutMe.html">About Me</a>
+                    <a class="nav-link nav-text text-light pointer" href="/public/aboutMe.html">About Me</a>
                     </li>
                     <li class="nav-item active">
-                    <a class="nav-link nav-text text-light" style="font-family: 'Kalam', cursive;" href="#name">Contact Me</a>
+                    <a class="nav-link nav-text text-light pointer"  onclick="scrollToSection('name')">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
         <div class="card">
           <img src="/image/IMG_9759.JPG" class="img-responsive" alt="Card Image">
           <div class="card-block">
-            <a href="" class="card-title">Dancer</a>
+            <a href="./public/aboutMe.html" class="card-title">Dancer</a>
             <p class="card-text">Since 2015</p>
           </div>
         </div>
@@ -77,7 +77,7 @@
         <div class="card">
           <img src="/image/profile2.jpg" class="img-responsive" alt="Card Image">
           <div class="card-block">
-            <a href="" class="card-title">Writer</a>
+            <a href="./public/aboutMe.html" class="card-title">Writer</a>
             <p class="card-text">Since 2020</p>
           </div>
         </div>
@@ -88,7 +88,7 @@
         <div class="card">
           <img src="./image/icon23.jpg" class="img-responsive" alt="Card Image">
           <div class="card-block">
-            <a href="" class="card-title">Code</a>
+            <a href="./public/aboutMe.html" class="card-title">Code</a>
             <p class="card-text">Since 2022</p>
           </div>
         </div>
@@ -102,7 +102,7 @@
       <div class="row">
         <div class="col-md-6 offset-md-3">
           <form action="https://formsubmit.co/tcherno.so@hotmail.com" method="POST" id="myForm">
-            <div class="mb-3 name">
+            <div class="mb-3 name" >
                 <label for="tag" class="form-label" >@tag</label>
                 <i class="fas fa-user"></i>
                 <input type="text" class="form-control" id="name" placeholder="Enter your tag">
@@ -160,15 +160,15 @@
                       <div class="carousel-caption ">
                         <h5 class=" blink_me text-uppercase carousel-text">@Quasimodo</h5>
                         <p class="text-capitalize m-3">“Today is a good day to try.”</p>
-                        <a href="#name" class="anchor"></a><button class="btn" >Send Me your Thoughts</button></a>
+                        <a href="#name" class="anchor"></a><button onclick="scrollToSection('name')" class="btn" >Send Me your Thoughts</button></a>
                       </div>
                     </div>
                     <div class="carousel-item carousel-class">
                       <img src="/image/homepage-best-stargazing-locations.jpg" class="d-block w-100 carousel-image rounded" alt="...">
                       <div class="carousel-caption ">
                         <h5 class=" blink_me text-uppercase carousel-text">@TonyRobbins</h5>
-                        <p class="text-capitalize m-3">“Goodt times, create weak people. Bad times, create strong people”</p>
-                        <a class="anchor" href="#name"></a><button class="btn">Send Me your Thoughts</button></a>
+                        <p class="text-capitalize m-3">“Good times, create weak people. Bad times, create strong people”</p>
+                        <a class="anchor" href="#name"></a><button onclick="scrollToSection('name')" class="btn">Send Me your Thoughts</button></a>
                       </div>
                     </div>
                     <div class="carousel-item carousel-class">
@@ -176,7 +176,7 @@
                       <div class="carousel-caption ">
                         <h5 class=" blink_me text-uppercase carousel-text">@SteveJobs</h5>
                         <p class="text-capitalize m-3">“The only way to do great work is to love what you do”</p>
-                        <a href="#name" class="anchor"></a><button class="btn" >Send Me your Thoughts</button></a>
+                        <a href="#name" class="anchor"></a><button onclick="scrollToSection('name')" class="btn" >Send Me your Thoughts</button></a>
                       </div>
                     </div>
                   </div>
@@ -231,9 +231,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="app.js"></script>
         <script>
-
-
-        
-        </script>
+       
+      </script>
     </body>
 </html>

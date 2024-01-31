@@ -15,6 +15,10 @@ body{
 
 
 /* NavBAr  */
+.pointer {
+  cursor: pointer;
+  font-family: 'Kalam', cursive;
+}
 
 .fade-in {
     opacity: 0;
