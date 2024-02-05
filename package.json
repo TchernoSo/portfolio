@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "gsap": "^3.12.4",
-    "split-text-js": "^1.0.3"
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.9"
   }
 }

@@ -101,7 +101,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <form action="https://formsubmit.co/tcherno.so@hotmail.com" method="POST" id="myForm">
+          
+          <form action="/submit-form" method="POST" id="myForm">
+            
             <div class="mb-3 name" >
                 <label for="tag" class="form-label" >@tag</label>
                 <i class="fas fa-user"></i>
@@ -113,26 +115,12 @@
                 <label for="email" class="form-label">Email address</label>
                 <i class="fas fa-envelope"></i>
                 <input type="text" class="form-control" id="email" placeholder="Enter your email address" required>
-                <input type="hidden" name="_subject" value="New Message!">
-                <input type="hidden" name="_captcha" value="true">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_autoresponse" value="It was very nice to hear from you. I will respond to you as soon as possible.">
-                <input type="hidden" name="_next" value="https://www.welcomethesoul.com/index.html">
               </div>
-      
-              
-      
-      
-      
       
               <div class="mb-3 message-box">
                 <label for="message" class="form-label">Message/Thoughts</label>
                 <textarea class="form-control" id="msg"  rows="3" placeholder="Enter your Message/Thoughts" required></textarea>
               </div>
-              
-            
-      
-      
       
               <div class="">
                 <button id="send" onclick="message()" type="submit" class="btn btn-outline-light alert button ">Submit</button>
