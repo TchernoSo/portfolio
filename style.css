@@ -246,6 +246,42 @@ body{
 }
 
 
+/* Marquee effect */
+
+.marquee-container {
+  width: 50%; /* Set to 50% of the viewport width */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite; /* Adjust animation duration as needed */
+  transition: none;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+.marquee p {
+  display: inline-block;
+  margin-right: 30px; /* Adjust spacing between phrases */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* from here  */
+
 
 /* My Cards */
 

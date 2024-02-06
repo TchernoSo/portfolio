@@ -55,7 +55,25 @@
        <div class="type-text">
             Self-taught <span></span>
         </div>
-    
+
+        
+
+        <div class="marquee-container">
+          <div class="marquee">
+            <p>Good times create weak people, bad times create strong people.</p>
+            <p>•</p>
+            <p>Time to create new memories</p>
+            <p>•</p>
+            <p>If you can visualize it, yes you can do it</p>
+            <p>•</p>
+            <p>Focus on improving yourself not proving yourself</p>
+            <p>•</p>
+            <p>It's you against you</p>
+            <p>•</p>
+          </div>
+        </div>
+        
+
 
 
   <!-- My cards  -->
@@ -219,7 +237,36 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="app.js"></script>
         <script>
-       
+        
+      
+      
+      
+// Clone the marquee content
+const marqueeContent = document.querySelector('.marquee').innerHTML;
+document.querySelector('.marquee').innerHTML += marqueeContent;
+
+// Calculate the width of a single marquee
+const marqueeWidth = document.querySelector('.marquee').scrollWidth;
+
+// Start the animation from the original position
+document.querySelector('.marquee').style.transform = 'translateX(0)';
+
+// Animate the marquee to move smoothly
+function animateMarquee() {
+  document.querySelector('.marquee').style.transition = 'transform 30s linear';
+  document.querySelector('.marquee').style.transform = 'translateX(-' + marqueeWidth + 'px)';
+  
+  // Reset the position when the animation ends
+  setTimeout(function() {
+    document.querySelector('.marquee').style.transition = 'none';
+    document.querySelector('.marquee').style.transform = 'translateX(0)';
+    setTimeout(animateMarquee, 100); // Start animation again after a brief delay
+  }, 2000000); // 20s = animation duration
+}
+
+// Start the animation
+animateMarquee();
+
       </script>
     </body>
 </html>
