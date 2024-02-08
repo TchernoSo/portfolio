@@ -248,39 +248,46 @@ body{
 
 /* Marquee effect */
 
+
 .marquee-container {
-  width: 50%; /* Set to 50% of the viewport width */
-  margin: 0 auto; /* Center the container horizontally */
   overflow: hidden;
-}
-
-.marquee {
-  display: inline-block;
+  width: 700px;
   white-space: nowrap;
-  animation: marquee 20s linear infinite; /* Adjust animation duration as needed */
-  transition: none;
 }
 
-.marquee:hover {
+.marquee-text {
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-text:hover {
   animation-play-state: paused;
 }
 
-.marquee p {
-  display: inline-block;
-  margin-right: 30px; /* Adjust spacing between phrases */
-}
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  20% {
+     opacity: 1;
+  }
+  
+  80% {
+    opacity: 1;
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+  0% {
+    transform: translateX(100%);
+  }
+  
+  100% {
+    transform: translateX(-257%);
   }
 }
-
-
-/* from here  */
 
 
 /* My Cards */
@@ -780,4 +787,18 @@ body{
         font-size: 30px;
         width: 500px;
     }
+    .marquee-container {
+      overflow: hidden;
+      width: 350px;
+      white-space: nowrap;
+    }
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-555%);
+      }
+    }
+  
 }
