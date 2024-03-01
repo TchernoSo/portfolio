@@ -8,7 +8,7 @@ body{
     color: #eee;
     width: 50%; 
     margin: 0 auto;
-    box-shadow: 0 0 10px rgba(98, 43, 43, 0.526);
+    box-shadow: 0 0 10px #10c3ff;
     opacity: 0;
     animation: fadeInAnimation 1s ease-in forwards; 
 }
@@ -252,13 +252,7 @@ body{
 
    #more {display: none;}
 
-/* form label */
-
-.form-label{
-    color: #bdc3c7;
-    text-shadow: 4px 4px 4px #26aeedbe;
-   
-  }
+/* BUTTONS*/
   
   .button{
     width: 50%;
@@ -280,123 +274,7 @@ body{
     animation: color 15s ease-in-out infinite;
   }
   
-  @keyframes color {
-    0%{
-      background-position: 0 50%;
-    }
-    50%{
-      background-position: 100% 50%;
-    }
-    100%{
-      background-position: 0 50%;
-    }
-  }
 
-  .name{
-    width: 100%;
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.name i{
-    position: absolute;
-    top: 70%;
-    left:92%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #bbb;
-}
-
-.name input{
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 5px 30px;
-}
-
-.name input::placeholder{
-  color: #bbb;
-  font-weight: 500;
-}
-
-
-.email{
-  width: 100%;
-  position: relative;
-  margin-bottom: 15px;
-  
-}
-.email i{
-  position: absolute;
-  top: 73%;
-  left: 92%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  color: #bbb;
-}
-.email input{
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  background-color: #eee;
-  border-radius: 20px;
-  padding: 5px 30px;
-}
-.email input::placeholder{
-  color: #bbb;
-  font-weight: 500;
-}
-
-
-.message-box{
-  width: 100%;
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.message-box textarea{
-  width: 100%;
-  padding: 20px 30px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  background-color: #eee;
-  border-radius: 20px;
-}
-.message-box textarea::placeholder{
-  color: #bbb;
-  font-weight: 500;
-}
-
-
-  .message{
-    width: 100%;
-    position: relative;
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
-}
-.message .success{
-    font-size: 20px;
-    color: green;
-    text-shadow: 1px 1px 2px #f3f3f3;
-    position: absolute;
-    animation: buttons .3s linear;
-    display: none;
-}
-.message .danger{
-    font-size: 20px;
-    color: rgb(225, 89, 89);
-    text-shadow: 1px 1px 2px #f3f3f3;
-    position: absolute;
-    transition: .3s;
-    animation: buttons .3s linear;
-    display: none;
-}
 @keyframes buttons{
     0%{
         transform: scale(0.1);
@@ -409,6 +287,53 @@ body{
     }
 }
 
+/* CONTACT ME  */
+.contact-text{
+  color: #7e7979;
+  text-shadow: 1px 2px 2px #10c3ff;
+  
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.contact-container .icon {
+  font-size: 40px;
+  margin: 20px;
+  color: #666;
+  transition: .5s;
+}
+.icon::before {
+  border-radius: 50%;
+  background: #10ff20;
+  transition: .5s;
+  transform: scale(.9);
+}
+
+.icon:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #1097ff;
+}
+
+.contact-container .icon:hover {
+  color: #10c3ff;
+  text-shadow: 0 0 5px #10ff9f;
+}
+
+.contact-container .icon i {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .icon{
+    font-size: 1;
+  }
+}
 
 
 /* carousel & footer  */
@@ -417,7 +342,7 @@ body{
     margin-bottom: 30px;
 }
 
-.carousel-text{
+.carousel-name{
     color: #2db4c9;
     text-shadow: 4px 4px 4px #f7f9fb;
     font-size: x-large;
@@ -434,6 +359,19 @@ body{
     filter: brightness(0.4);
 
   }
+
+
+  @media (max-width: 768px) {
+    .carousel-name{
+      font-size: large;
+        
+    }
+    .carousel-message{
+      font-size: small;
+    }
+ }
+
+
 .anchor{
     text-decoration: none;
 }
