@@ -2,14 +2,32 @@ html {
     scroll-behavior: smooth;
   }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     font-family: Poppins;
-    margin: 0;
     background-color: #010101;
     color: #eee;
-    /* overflow-x: hidden; */
+    width: 50%; 
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(98, 43, 43, 0.526);
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards; 
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Responsive behavior for mobile */
+@media (max-width: 768px) { 
+  body {
+    width: 100%;          
+    margin-top: 10px;     
+  }
 }
 
 
@@ -20,33 +38,11 @@ body{
   font-family: 'Kalam', cursive;
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeInAnimation 1s ease-in forwards;
-  }
-  
-   
-  @keyframes fadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  nav{
-    width: 70%;
-
-}
 
 .navbar-brand:hover {
     text-shadow: 4px 4px 4px #00fad0;
   }
 
-  
-
-  
   /* hide close when burger shown */
   .navbar-toggler.collapsed .close-icon {
       display: none;
@@ -59,8 +55,7 @@ body{
       
   }
   
-  .container,
-    .navbar {
+   .navbar {
      margin: 0 auto; /* Center align the container horizontally */
       text-align: center; /* Center align the text within the container */
       padding: 20px; /* Add some padding to the container */
@@ -86,93 +81,13 @@ body{
 .main-pic{
     height: 50vh;
     position: relative;
-}
- .text{
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%)
-}
-
-.blink_me {
-  animation: blinker 3s linear infinite;
-  font-size: 35px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .blink_me {
-      font-size: 20px;
-  }
-
-}
-
-@keyframes blinker {
-  50% {
-    color: rgb(39, 208, 197);
-    opacity: 0.7;
-  }
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
 
-.welcome{
-    font-size: 45px;
-    font-weight: 500;
-    background: linear-gradient(90deg, #000, #fff, #000);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 80%;
-    animation: shine 25s linear infinite;
-    
-    
-}
 
-@keyframes shine {
-    0% {
-      background-position-x: -500%;
-    }
-    100% {
-      background-position-x: 500%;
-    }
-  }
-
-  span{
-    display: block;
-}
-
-.text1{
-    font-size: 30px;
-    width: 500px;
-    font-weight: 600;
-    letter-spacing: 8px;
-    margin-bottom: 20px;
-    position: relative;
-    animation: text 3s 1;
-    background-color: #000;
-}
-
-.text2{
-    font-size: 35px;
-    
-    
-}
-
-@keyframes text {
-    0%{
-        color: black;
-        margin-bottom: -50px;
-    }
-    30%{
-        letter-spacing: 25px;
-        margin-bottom: -50px;
-    }
-    85%{
-        letter-spacing: 8px;
-        margin-bottom: -50px;
-    }
-}
 
 
 /* /typewritting effect/ */
@@ -183,7 +98,7 @@ body{
     font-weight: 600;
     min-width: 280px;
     display: flex;
-    margin-bottom: 20px;
+    margin: 20px;
     justify-content: center;
     }
 
@@ -193,7 +108,7 @@ body{
 }
 
 .type-text span::before{
-    content: 'Coder';
+    content: '';
     color: rgb(97, 175, 203);
     animation: words 20s infinite;
 
@@ -301,9 +216,8 @@ body{
     }
 
 .img-responsive{
-    height: 350px;
-    width: 300px;
-    margin-left: 15%;
+    height: 250px;
+    width: 200px;
     margin-bottom: 10px;
     border-radius: 15px;
     background-color: #3498db;
@@ -320,17 +234,23 @@ body{
 
 .card-title{
     font-size: 25px;
-    padding: 10px 0 10px 0 
+    padding: 10px 0 0px 0;
+    
 }
 
 .card-text{
     text-shadow: none;
     font-size: 12px;
     color: #938d8d;
-}
+    padding-bottom: 10px;
 
+   }
 
+   video{
+    margin: 40px 0;
+   }
 
+   #more {display: none;}
 
 /* form label */
 

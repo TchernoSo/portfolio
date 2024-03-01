@@ -53,7 +53,7 @@ thumbnails.forEach((thumbnail, index) => {
 })
 
 
-// typewrititing effect 
+// typewrititing effect
 
 document.addEventListener("DOMContentLoaded", function() {
     const words = ['Coder', 'Artist', 'Writer', 'Mentor'];
@@ -89,6 +89,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     typeWriter(); // Start the typewriting effect
 });
+
+
+
+
+// read more 
+function myRead() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }
+
 
 
 // email section 
