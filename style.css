@@ -48,7 +48,7 @@ body{
 }
 
 .navbar-brand:hover {
-    text-shadow: 4px 4px 4px #00fad0;
+    text-shadow: 0 0 10px #10c3ff;
   }
 
   /* hide close when burger shown */
@@ -95,8 +95,38 @@ body{
     transform: translateX(-50%);
 }
 
-
-
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+}
+.text-block {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  opacity: 0.8;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 6px;
+   
+  text-shadow: 
+  -1px -1px 1px #FFFFFF, 
+  -1px 1px 1px #FFFFFF, 
+  1px -1px 1px #FFFFFF, 
+  1px 1px 1px #FFFFFF, 
+  0 0 5px #FFFFFF, 
+  0 0 15px #FFFFFF, 
+  0 0 25px #FFFFFF, 
+  0 0 10px #10c3ff,
+  0 0 10px #10c3ff,
+  0 0 10px #10c3ff,
+  0 0 10px #10c3ff,
+  0 0 10px #10c3ff, 
+  0 0 10px #10c3ff;
+    color: white;
+}
 
 
 
@@ -119,7 +149,7 @@ body{
 
 .type-text span::before{
     content: '';
-    color: rgb(97, 175, 203);
+    color: #10c3ff;
     animation: words 20s infinite;
 
 }
@@ -220,15 +250,16 @@ body{
 .card{
 
     background-color: #000;
-    color: #ffffff;
-    text-shadow: 1px 2px 2px #00fad0;
+    color:  #10c3ff;
+    text-shadow: 0 0 10px #10c3ff;
     margin-top: 50px;
     text-align: center;
+    
     }
 
 .img-responsive{
     height: 250px;
-    width: 200px;
+    width: 220px;
     margin-bottom: 10px;
     border-radius: 15px;
     background-color: #3498db;
@@ -240,13 +271,14 @@ body{
 
     &:hover{
       transform: scale(1.05);
-      box-shadow: 0 0 20px
+      box-shadow: 0 0 20px #10c3ff; 
     }
 }
 
 .card-title{
     font-size: 25px;
     padding: 10px 0 0px 0;
+    text-decoration: none;
     
 }
 
@@ -275,8 +307,8 @@ body{
 
   .btn{
     
-    background: linear-gradient(90deg, #8d8a8a, #fff, #000);
-    border-radius: 30px;
+    background: linear-gradient(90deg, #8d8a8a, #fff, #000000);
+    
     background-size: 300% 300%;
     transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out; 
   }
@@ -284,14 +316,16 @@ body{
   .btn:hover {
     transform: scale(0.9);
     box-shadow: 0 0 15px #1097ff;
+    color: #10c3ff;;
   }
+
+
 
 
 /* CONTACT ME  */
 .contact-text{
-  color: #7e7979;
-  text-shadow: 1px 2px 2px #10c3ff;
-  
+  color:  #10c3ff;
+    text-shadow: 0 0 10px #10c3ff;
 }
 
 .contact-container {
@@ -340,7 +374,8 @@ body{
 
 
 .carousel-name{
-    color: #2db4c9;
+    color:  #10c3ff;
+    text-shadow: 0 0 10px #10c3ff;;
     text-shadow: 4px 4px 4px #f7f9fb;
     font-size: x-large;
   }
@@ -376,81 +411,21 @@ body{
   
   footer{
     font-weight: bold;
-    color: #2db4c9;
+    color: #10c3ff;
     text-shadow: 4px 4px 4px #f7f9fba7;
     margin-top: 20px;
   }
 
 
 
-/* inspire-me  */
+/* My Work  */
 
-.img-container {
-    position: relative;
-  }
-  
-  .title {
-    position: absolute;
-    width: 100%;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(192, 179, 179, 0.268);
-    font-size: 36px;
-    text-shadow: 1px 0px 0px #3deed049;
-    margin-bottom: 20px;
-  
-  }
-  @media (max-width: 768px) {
-    .title{font-size: 17px;}}
-  
-  .text-container {
-    opacity: 0;
-    animation-name: textFader;
-    animation-duration: 18s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 45%;
-    left: 70%;
-    color: rgba(255, 255, 255, 0.44);
-  
-  }
-  
-  @media (max-width: 768px) {
-    .text-container{font-size: 13px;}
-  .tag{font-size: 15px}}
-  .text-container:nth-of-type(1) { animation-delay: 0s; }
-  .text-container:nth-of-type(2) { animation-delay: 6s; }
-  .text-container:nth-of-type(3) { animation-delay: 12s; }
-  
-  @keyframes textFader {
-    0% {
-        opacity: 0;
-    } /* fade-in */
-    11% {
-        opacity: 1;
-    } /* show */
-    22% {
-        opacity: 1;
-    } /* fade-out */
-    33% {
-        opacity: 0;
-    } /* waiting for the finish animation of other blocks */
-    100% {
-        opacity: 0;
-    }
-  }
-  
-  .img-inspire{
-    filter: brightness(0.4);
-  }
-  
-  @media (max-width: 768px) {
-    #targetElement{font-size: 14px;}}
-  
-
+.img-mywork{
+  border: 5px solid #000000;
+  transform: scale(1);
+  box-shadow: 0 0 20px #10c3ff; 
+  margin-top: 20px;
+}
 
   
 
