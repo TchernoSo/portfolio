@@ -142,17 +142,53 @@ function scrollToSection(sectionId) {
 
 
 
-// Email Effect 
-const hoverTrigger = document.querySelector('.hover-trigger');
-const targetElement = document.querySelector('.target-element');
+//Email Color
+document.addEventListener('DOMContentLoaded', function () {
+    const hoverTrigger = document.querySelector('.hover-trigger');
+    const targetElement = document.querySelector('.target-element');
 
-// Adding event listener for hover on the trigger element
-hoverTrigger.addEventListener('mouseenter', () => {
-    // Changing background color of the target element
-    targetElement.style.backgroundColor = '#10c3ff';
+    // Adding event listener for hover on the trigger element
+    hoverTrigger.addEventListener('mouseenter', () => {
+        // Changing background color of the target element
+        targetElement.style.backgroundColor = '#10c3ff';
+    });
+
+    hoverTrigger.addEventListener('mouseleave', () => {
+        // Resetting background color of the target element
+        targetElement.style.backgroundColor = '';
+    });
 });
 
-hoverTrigger.addEventListener('mouseleave', () => {
-    // Resetting background color of the target element
-    targetElement.style.backgroundColor = '#000000';
-});
+
+
+// Show Text on click
+function switchToText(buttonNum) {
+    var buttons = document.querySelectorAll('.button');
+    var texts = document.querySelectorAll('.text');
+  
+    buttons.forEach(button => {
+      button.style.display = "inline-block"; // Reset all buttons to be visible
+    });
+  
+    texts.forEach(text => {
+      text.style.display = "none"; // Reset all texts to be hidden
+    });
+  
+    var buttonId = "switchButton" + buttonNum;
+    var textId = "textToShow" + buttonNum;
+  
+    var button = document.getElementById(buttonId);
+    var textDiv = document.getElementById(textId);
+  
+    button.style.display = "none"; // Hide clicked button
+    textDiv.style.display = "block"; // Show corresponding text
+  
+    // Set a timeout to revert the buttons back to normal after 5 seconds
+    setTimeout(function() {
+      buttons.forEach(button => {
+        button.style.display = "inline-block";
+      });
+      textDiv.style.display = "none";
+    }, 5000); // 5000 milliseconds = 5 seconds
+  }
+  

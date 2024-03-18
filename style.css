@@ -319,7 +319,9 @@ body{
     color: #10c3ff;;
   }
 
-
+  video {
+    pointer-events: none;
+}
 
 
 /* CONTACT ME  */
@@ -367,7 +369,21 @@ body{
   .icon{
     font-size: 1;
   }
+  .marquee-container {
+    overflow: hidden;
+    width: 350px;
+    white-space: nowrap;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-555%);
+    }
+  }
 }
+
 
 
 /* carousel & footer  */
@@ -469,7 +485,7 @@ body{
     left: 0;
     bottom: 0;
     background-image: linear-gradient(
-        to top, #000000 40%, transparent
+        to top, #000000f3 40%, transparent
     );
 }
 .slider .list .item .content{
@@ -521,12 +537,11 @@ body{
 }
 .arrows button{
     background-color: #eee5;
-    border: none;
     font-family: monospace;
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    font-size: x-large;
+    font-size: medium;
     color: #eee;
     transition: .5s;
 }
@@ -571,6 +586,10 @@ body{
     inset: auto 10px 10px 10px;
 }
 @media screen and (max-width: 678px) {
+
+  body{
+    height:790px;
+  }
   #welcome{
     padding-left: 0px;
     padding-top: 0px;
@@ -581,37 +600,29 @@ body{
 }
   .thumbnail{
         justify-content: start;
-        top:110%;
+        top:125%;
     }
     .slider .list .item .content h2{
         font-size: 60px;
     }
     .arrows{
-        top: 102%;
-        left: 40%;
-    }
+      top: 105%;
+      left: 40%;
+  }
 
     
-    .slider .list .item .content{
-        position: absolute;
-        left: 5%;
-        top: 20%;
-        max-width: 95%;
-        z-index: 1;
+    .slider .list .item .content {
+      position: absolute;
+      left: 5%;
+      top: 10%;
+      max-width: 95%;
+      z-index: 1;
+    }
+    
+    .content-tumbnail{
+      visibility: hidden;
     }
    
-    .marquee-container {
-      overflow: hidden;
-      width: 350px;
-      white-space: nowrap;
-    }
-    @keyframes marquee {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-555%);
-      }
-    }
+
   
 }
